@@ -3863,7 +3863,7 @@ tbody.collapse.show {
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid #46a1e6;
 }
 
 .nav-tabs .nav-item {
@@ -3871,13 +3871,13 @@ tbody.collapse.show {
 }
 
 .nav-tabs .nav-link {
-  border: 1px solid transparent;
+  border: 1px solid black;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
 
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-  border-color: #e9ecef #e9ecef #dee2e6;
+  border-color: #1ea7e9 #e9ecef #dee2e6;
 }
 
 .nav-tabs .nav-link.disabled {
@@ -3937,16 +3937,17 @@ tbody.collapse.show {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: center;
+  -webkit-box-align: ;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
+  /*justify-content: space-between;*/
+  padding: 0rem 1rem;
+  vertical-align: top;
 }
 
 .navbar > .container,
@@ -6091,7 +6092,7 @@ button.bg-primary:focus {
 a.bg-secondary:hover, a.bg-secondary:focus,
 button.bg-secondary:hover,
 button.bg-secondary:focus {
-  background-color: #545b62 !important;
+  background-color: #545b62;
 }
 
 .bg-success {
@@ -7627,7 +7628,7 @@ button.bg-dark:focus {
 
 .pt-3,
 .py-3 {
-  padding-top: 1rem !important;
+  /*padding-top: 0.4rem !important;*/
 }
 
 .pr-3,

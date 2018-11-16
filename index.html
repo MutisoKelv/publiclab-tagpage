@@ -19,10 +19,9 @@
     <!-- Custom Theme files -->
     <link href="assets/common-css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
     <link href="assets/common-css/style.css" type="text/css" rel="stylesheet" media="all">
-    <link rel="stylesheet" href="assets/common-css/jquery.bs_pagination.min.css">
-
-    <!-- font-awesome icons -->
-    <link href="assets/common-css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="assets/common-css/filter.css" type="text/css" rel="stylesheet" media="all">
+    <link href="assets/common-css/all.css" rel="stylesheet">
+    <link href="assets/common-css/fontawesome.min.css" rel="stylesheet">
 
     <!-- online-fonts -->
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i"
@@ -46,31 +45,57 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav text-center flex-column">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#research_notes">Research Notes
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll" href="#">Questions</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll" href="#">Wiki pages</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll" href="#">Maps</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll" href="#">Contributors</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll" href="#">Follow topic</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll" href="#">Related Tags</a>
-                        </li>
-                    </ul>
+                    <div class="tab">
+                        <button class="button button2"><a href="https://publiclab.org/wiki/balloon-mapping">Follow Topic</a></button>
+                        <button class="button button2" onclick="lab(event, 'Notes')" id="defaultOpen"><a href="#home">Home</a></button>
+                        <button class="button button2" onclick="lab(event, 'Notes')" id="defaultOpen"><a href="#research_notes">Notes</a></button>
+                        <br>
+                        <button class="button button2" onclick="lab(event, 'Questions')"><a href="#questions">Questions</a></button>
+                        <br>
+                        <button class="button button2" onclick="lab(event, 'Wiki')"><a href="#Wiki">Wiki</a></button>
+                        <button class="button button2" onclick="lab(event, 'Maps')"><a href="#maps">Maps</a></button>
+                        <button class="button button2" onclick="lab(event, 'Teams')"><a href="#teams">Contributors</a></button>
+                    </div>
+
+                    <!--<div id="Notes" class="tabcontent">-->
+                        <!--<h3>London</h3>-->
+                        <!--<p>London is the capital city of England.</p>-->
+                    <!--</div>-->
+
+                    <!--<div id="Questions" class="tabcontent">-->
+                        <!--<h3>Paris</h3>-->
+                        <!--<p>Paris is the capital of France.</p>-->
+                    <!--</div>-->
+
+                    <!---->
+                        <!--<h3>Tokyo</h3>-->
+                        <!--<p>Tokyo is the capital of Japan.</p>-->
+                    <!--</div>-->
+                    <!--<ul class="navbar-nav text-center flex-column">-->
+                        <!--<li class="nav-item active">-->
+                            <!--<a class="nav-link" href="#research_notes">Research Notes-->
+                                <!--<span class="sr-only">(current)</span>-->
+                            <!--</a>-->
+                        <!--</li>-->
+                        <!--<li class="nav-item">-->
+                            <!--<a class="nav-link scroll" href="#questions">Questions</a>-->
+                        <!--</li>-->
+                        <!--<li class="nav-item">-->
+                            <!--<a class="nav-link scroll" href="#">Wiki pages</a>-->
+                        <!--</li>-->
+                        <!--<li class="nav-item">-->
+                            <!--<a class="nav-link scroll" href="#">Maps</a>-->
+                        <!--</li>-->
+                        <!--<li class="nav-item">-->
+                            <!--<a class="nav-link scroll" href="#">Contributors</a>-->
+                        <!--</li>-->
+                        <!--<li class="nav-item">-->
+                            <!--<a class="nav-link scroll" href="#">Follow topic</a>-->
+                        <!--</li>-->
+                        <!--<li class="nav-item">-->
+                            <!--<a class="nav-link scroll" href="#">Related Tags</a>-->
+                        <!--</li>-->
+                    <!--</ul>-->
                 </div>
 
             </nav>
@@ -83,1101 +108,998 @@
 
         <!--banner-->
         <div class="banner-text-w3ls">
-            <div class="container">
-                    <img src="assets/common-images/slide.jpg" alt="">
-                <div class="mx-auto">
-                    <h2>Balloon Mapping</h2>
-                    <p>Balloon mapping is a low-cost way to take aerial photos using a camera, attached to a balloon, on a spool of string. People have done this from a few hundred feet up all the way to over 4,000 feet in the air.</p>
-                </div>
-                <div class="buttons-coll">
-                    <a href="#"><button class="custom-btn btn-6">Learn More</button></a>
-                </div>
+            <div class="container" id="home">
+                <div class="card cardy">
+                    <div class="box">
+                        <div class="img">
+                            <img src="assets/common-images/slide.jpg" alt="">
+                        </div>
+                        <h2>Balloon Mapping</h2>
+                        <p> Balloon mapping is a low-cost way to take aerial photos using a camera, attached to a balloon, on a spool of string.
+                            <br>People have done this from a few hundred feet up all the way to over 4,000 feet in the air.</p>
+                        <div id="outer">
+                            <div class="button_slide slide_left"><a href="https://publiclab.org/wiki/balloon-mapping"><i class="fas fa-external-link-alt"></i> Follow Topic</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
 
+            <!--questions-->
+            <div class="btn-group" style="width:100%">
+                <button style="width:50%"><a href="https://publiclab.org/post?tags=question:balloon-mapping&template=question&redirect=question"> Ask a Question<i class="fas fa-question"></i></a></button>
+                <p style="padding-top: 2em; font-size: 1.3rem">or</p>
+                <button style="width:50%"><a href="https://publiclab.org/subscribe/tag/question:balloon-mapping">Answer a Question<i class="fas fa-edit"></i></a></button>
+            </div>
+        </div>
+
+
+
+
 
         <!--research notes-->
-        <section class="wthree-row py-lg-5" id="research_notes">
+        <div id="Notes" class="tabcontent">
+            <section class="wthree-row py-lg-5" id="research_notes">
             <div class="container pt-sm-5">
                 <h3 class="stat-title pb-3">Research notes</h3>
+
                 <span class="w3-line mx-auto text-center d-block"></span>
+
+                <div class="container">
+
+                    <div class="dropdown">
+                        <span class="selLabel">Filter Notes</span>
+                        <input type="hidden" name="cd-dropdown">
+                        <ul class="dropdown-list">
+                            <li data-value="1">
+                                <span>Most viewed</span>
+                            </li>
+                            <li data-value="2">
+                                <span>Most important</span>
+                            </li>
+                            <li data-value="3">
+                                <span>Recent updates</span>
+                            </li>
+                            <li data-value="4">
+                                <span>New this week</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
                 <div class="container">
                     <!--page1-->
                     <div id="pg1">
-                        <div class="row pt-5 mt-4 d-flex justify-content-center">
-                        <!--cards-->
-                            <div class="card-columns">
-                                <div class="card">
-                                    <a href="https://publiclab.org/notes/joyofsoy/10-24-2018/educating-a-new-generation-of-advocates"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="https://publiclab.org/notes/joyofsoy/10-24-2018/educating-a-new-generation-of-advocates"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                            <div class="row pt-5 mt-4 d-flex justify-content-center">
+                                <!--cards-->
+                                <div class="card-columns">
+                                    <div class="card">
+                                        <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
                                     </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="https://publiclab.org/profile/joyofsoy">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                    <div class="card">
+                                        <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="card">
-                                    <a href="https://publiclab.org/notes/dusjagr/10-19-2018/playaround-2018-taipei-off-ground-fly-high"><img class="card-img-top" src="assets/common-images/002.jpg" alt="playaround 2018 - Taipei | Off Ground - Fly High"></a>
-                                    <div class="card-body">
-                                        <a href="https://publiclab.org/notes/dusjagr/10-19-2018/playaround-2018-taipei-off-ground-fly-high"><p class="card-text">playaround 2018 - Taipei | Off Ground - Fly High</p></a>
+                                    <div class="card">
+                                        <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
                                     </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="https://publiclab.org/profile/dusjagr">dusjagr</a> 8 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 83 views | <i class="far fa-star"></i> 3</small>
+                                    <div class="card">
+                                        <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="card">
-                                    <a href="https://publiclab.org/notes/mathew/10-18-2018/airpup-designing-a-kite-balloon"><img class="card-img-top" src="assets/common-images/003.jpg" alt="Airpup: designing a kite balloon"></a>
-                                    <div class="card-body">
-                                        <a href="https://publiclab.org/notes/mathew/10-18-2018/airpup-designing-a-kite-balloon"><p class="card-text">Airpup: designing a kite balloon</p></a>
+                                    <div class="card">
+                                        <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
                                     </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="https://publiclab.org/profile/mathew">mathew</a> 9 days ago | <i class="far fa-comment"></i> 1 | <i class="fas fa-eye"></i> 250 views | <i class="far fa-star"></i> 4</small>
+                                    <div class="card">
+                                        <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="card">
-                                    <a href="https://publiclab.org/notes/cfastie/9-25-2012/360"><img class="card-img-top" src="assets/common-images/004.jpg" alt="Three sixty"></a>
-                                    <div class="card-body">
-                                        <a href="https://publiclab.org/notes/cfastie/9-25-2012/360"><p class="card-text">Three sixty</p></a>
+                                    <div class="card">
+                                        <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
                                     </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="https://publiclab.org/profile/cfastie">cfastie</a> about 6 years ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 2183 views | <i class="far fa-star"></i> 0</small>
+                                    <div class="card">
+                                        <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="card">
-                                    <a href="https://publiclab.org/notes/cfastie/06-01-2014/super-redstone"><img class="card-img-top" src="assets/common-images/005.jpg" alt="Super Redstone"></a>
-                                    <div class="card-body">
-                                        <a href="https://publiclab.org/notes/cfastie/06-01-2014/super-redstone"><p class="card-text">Super Redstone</p></a>
+                                    <div class="card">
+                                        <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
                                     </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="https://publiclab.org/profile/cfastie">cfastie</a> over 5 years ago | <i class="far fa-comment"></i> 3 | <i class="fas fa-eye"></i> 3441 views | <i class="far fa-star"></i> 3</small>
+                                    <div class="card">
+                                        <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="card">
-                                    <a href="https://publiclab.org/notes/cfastie/05-21-2013/ifarm-big-picture"><img class="card-img-top" src="assets/common-images/006.jpg" alt="iFarm Big Picture"></a>
-                                    <div class="card-body">
-                                        <a href="https://publiclab.org/notes/cfastie/05-21-2013/ifarm-big-picture"><p class="card-text">iFarm Big Picture</p></a>
+                                    <div class="card">
+                                        <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
                                     </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="https://publiclab.org/profile/cfastie">cfastie</a> over 5 years ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 4778 views | <i class="far fa-star"></i> 1</small>
+                                    <div class="card">
+                                        <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="card">
-                                    <a href="https://publiclab.org/notes/cfastie/07-29-2013/waterchestnut-nrg"><img class="card-img-top" src="assets/common-images/007.jpg" alt="Water chestnut NRG"></a>
-                                    <div class="card-body">
-                                        <a href="https://publiclab.org/notes/cfastie/07-29-2013/waterchestnut-nrg"><p class="card-text">Water chestnut NRG</p></a>
+                                    <div class="card">
+                                        <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
                                     </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="https://publiclab.org/profile/cfastie">cfastie</a> about 5 years ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 4831 views | <i class="far fa-star"></i> 2</small>
+                                    <div class="card">
+                                        <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="card">
-                                    <a href="https://publiclab.org/notes/cfastie/10-08-2014/the-kaptober-collection"><img class="card-img-top" src="assets/common-images/008.jpg" alt="The KAPtober Collection"></a>
-                                    <div class="card-body">
-                                        <a href="https://publiclab.org/notes/cfastie/10-08-2014/the-kaptober-collection"><p class="card-text">The KAPtober Collection</p></a>
+                                    <div class="card">
+                                        <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
                                     </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="https://publiclab.org/profile/cfastie">cfastie</a> about 4 years ago | <i class="far fa-comment"></i> 1 | <i class="fas fa-eye"></i> 4303 views | <i class="far fa-star"></i> 5</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="https://publiclab.org/notes/cfastie/10-29-2012/agricultural-trial-mapping"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Agricultural mapping"></a>
-                                    <div class="card-body">
-                                        <a href="https://publiclab.org/notes/cfastie/10-29-2012/agricultural-trial-mapping"><p class="card-text">Agricultural mapping</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="https://publiclab.org/profile/cfastie">cfastie</a> about 6 years ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 7629 views | <i class="far fa-star"></i> 2</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="https://publiclab.org/profile/cfastie">cfastie</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                <div class="card-body">
-                                    <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                </div>
-                            </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="pg2" style="display: none;">
-                        <div class="row pt-5 mt-4 d-flex justify-content-center">
-                            <!--cards-->
-                            <div class="card-columns">
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">page2</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                    <div class="card">
+                                        <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="pg3" style="display: none;">
-                        <div class="row pt-5 mt-4 d-flex justify-content-center">
-                            <!--cards-->
-                            <div class="card-columns">
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">page3</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="pg4" style="display: none;">
-                        <div class="row pt-5 mt-4 d-flex justify-content-center">
-                            <!--cards-->
-                            <div class="card-columns">
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">4</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="pg5" style="display: none;">
-                        <div class="row pt-5 mt-4 d-flex justify-content-center">
-                            <!--cards-->
-                            <div class="card-columns">
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">page5</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="pg6" style="display: none;">
-                        <div class="row pt-5 mt-4 d-flex justify-content-center">
-                            <!--cards-->
-                            <div class="card-columns">
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">page6</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="pg7" style="display: none;">
-                        <div class="row pt-5 mt-4 d-flex justify-content-center">
-                            <!--cards-->
-                            <div class="card-columns">
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">7</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
-                <div class="pagination">
-                    <a href="#research_notes" class="disabled">&laquo;</a>
-                    <a href="#research_notes" id="no1">1</a>
-                    <a href="#research_notes" id="no2">2</a>
-                    <a href="#research_notes" id="no3">3</a>
-                    <a href="#research_notes" id="no4">4</a>
-                    <a href="#research_notes" id="no5">5</a>
-                    <a href="#research_notes" id="no6">6</a>
-                    <a href="#research_notes" id="no7">7</a>
-                    <a href="#research_notes" class="disabled">&raquo;</a>
-                </div>
+                <!--<div class="pagination">-->
+                    <!--<a href="#research_notes" class="disabled">&laquo;</a>-->
+                    <!--<a href="#research_notes" id="no1">1</a>-->
+                    <!--<a href="#research_notes" id="no2">2</a>-->
+                    <!--<a href="#research_notes" id="no3">3</a>-->
+                    <!--<a href="#research_notes" id="no4">4</a>-->
+                    <!--<a href="#research_notes" id="no5">5</a>-->
+                    <!--<a href="#research_notes" id="no6">6</a>-->
+                    <!--<a href="#research_notes" id="no7">7</a>-->
+                    <!--<a href="#research_notes" class="disabled">&raquo;</a>-->
+                <!--</div>-->
 
-                </div>
+            </div>
         </section>
+        </div>
+            <!--questions-->
+        <div id="Questions" class="tabcontent">
+            <section class="wthree-row py-lg-5" id="questions">
+            <div class="container pt-sm-5">
+                <h3 class="stat-title pb-3">Questions</h3>
+
+                <span class="w3-line mx-auto text-center d-block"></span>
+
+
+                <div class="container">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#ask">Asked</a></li>
+                        <li><a data-toggle="tab" href="#ans">Answered</a></li>
+
+                    </ul>
+
+                    <div class="tab-content">
+                        <!--asked-->
+                        <div id="ask" class="tab-pane fade in active">
+                            <div class="row pt-5 mt-4 d-flex justify-content-center">
+                                <!--cards-->
+                                <div class="card-columns">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
+                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
+                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
+                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
+                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
+                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
+                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
+                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
+                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
+                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
+                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
+                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
+                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
+                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
+                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
+                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
+                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--answered-->
+                        <div id="ans" class="tab-pane fade">
+                            <div class="row pt-5 mt-4 d-flex justify-content-center">
+                                <!--cards-->
+                                <div class="card-columns">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
+
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
+
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
+
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
+
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
+
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
+
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
+
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
+
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                    <div class="card-body">
+                                        <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
+
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                        <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                    </div>
+                                </div>
+                                    <div class="card">
+                                    <div class="card-body">
+                                        <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
+
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                        <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                    </div>
+                                </div>
+                                    <div class="card">
+                                    <div class="card-body">
+                                        <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
+
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                        <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                    </div>
+                                </div>
+                                    <div class="card">
+                                    <div class="card-body">
+                                        <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
+
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                        <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                    </div>
+                                </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
+
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
+
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
+
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
+
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+        </div>
+
+        <!--wiki-->
+        <div id="Wiki" class="tabcontent">
+            <section class="wthree-row py-lg-5" id="questions">
+                <div class="container pt-sm-5">
+                    <h3 class="stat-title pb-3">Wiki Pages</h3>
+
+                    <span class="w3-line mx-auto text-center d-block"></span>
+
+                <div class="tbl-header">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                        <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>URL</th>
+                            <th>Last edited</th>
+                            <th>Edits</th>
+                            <th>Page views</th>
+                            <th>Likes</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="tbl-content">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                        <tbody>
+                            <tr>
+                                <td><a href="#">Pi Camera</a></td>
+                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                <td>10 days ago by <a href="#">warren</a></td>
+                                <td>14</td>
+                                <td style="text-align: center;">1191</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Pi Camera</a></td>
+                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                <td>10 days ago by <a href="#">warren</a></td>
+                                <td>14</td>
+                                <td style="text-align: center;">1191</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Pi Camera</a></td>
+                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                <td>10 days ago by <a href="#">warren</a></td>
+                                <td>14</td>
+                                <td style="text-align: center;">1191</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Pi Camera</a></td>
+                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                <td>10 days ago by <a href="#">warren</a></td>
+                                <td>14</td>
+                                <td style="text-align: center;">1191</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Pi Camera</a></td>
+                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                <td>10 days ago by <a href="#">warren</a></td>
+                                <td>14</td>
+                                <td style="text-align: center;">1191</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Pi Camera</a></td>
+                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                <td>10 days ago by <a href="#">warren</a></td>
+                                <td>14</td>
+                                <td style="text-align: center;">1191</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Pi Camera</a></td>
+                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                <td>10 days ago by <a href="#">warren</a></td>
+                                <td>14</td>
+                                <td style="text-align: center;">1191</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Pi Camera</a></td>
+                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                <td>10 days ago by <a href="#">warren</a></td>
+                                <td>14</td>
+                                <td style="text-align: center;">1191</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Pi Camera</a></td>
+                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                <td>10 days ago by <a href="#">warren</a></td>
+                                <td>14</td>
+                                <td style="text-align: center;">1191</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Pi Camera</a></td>
+                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                <td>10 days ago by <a href="#">warren</a></td>
+                                <td>14</td>
+                                <td style="text-align: center;">1191</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Pi Camera</a></td>
+                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                <td>10 days ago by <a href="#">warren</a></td>
+                                <td>14</td>
+                                <td style="text-align: center;">1191</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Pi Camera</a></td>
+                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                <td>10 days ago by <a href="#">warren</a></td>
+                                <td>14</td>
+                                <td style="text-align: center;">1191</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Pi Camera</a></td>
+                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                <td>10 days ago by <a href="#">warren</a></td>
+                                <td>14</td>
+                                <td style="text-align: center;">1191</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Pi Camera</a></td>
+                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                <td>10 days ago by <a href="#">warren</a></td>
+                                <td>14</td>
+                                <td style="text-align: center;">1191</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Pi Camera</a></td>
+                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                <td>10 days ago by <a href="#">warren</a></td>
+                                <td>14</td>
+                                <td style="text-align: center;">1191</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Pi Camera</a></td>
+                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                <td>10 days ago by <a href="#">warren</a></td>
+                                <td>14</td>
+                                <td style="text-align: center;">1191</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+            </section>
+        </div>
+
+
+
+
+
+
+        <!--maps-->
+        <div id="Maps" class="tabcontent">
+            <section class="wthree-row py-lg-5" id="maps">
+                <div class="container pt-sm-5">
+                    <h3 class="stat-title pb-3">Maps</h3>
+                    <div class="card" style="width: 50%;">
+                        <a href="#"><img class="card-img-top" src="assets/common-images/Screen_Shot_2014-03-28_at_3.05.31_PM.png" alt=""  height="inherit"></a>
+                        <div class="card-body">
+                            <a href="#"><p class="card-text">CBD Growth. Lafayette, California.</p></a>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">by <a href="#"> Cartographer: Stewart Long | Mapper: Stewart Long</a> over 8 years ago | <i class="far fa-comment"></i> 0 | <i class="far fa-star"></i> 0</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!--Contributors-->
+        <div id="Teams" class="tabcontent">
+            <section class="wthree-row py-lg-5" id="teams">
+                <div class="container pt-sm-5">
+                    <h3 class="stat-title pb-3">Contributors</h3>
+                    <h5 class="stat-title pb-3">Howdy here, see how big the community around this topic is <i class="fas fa-smile-beam"></i> </h5>
+
+                    <span class="w3-line mx-auto text-center d-block"></span>
+
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc">Warren</div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc">Warren</div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc">Warren</div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc">Warren</div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc">Warren</div>
+                    </div>
+                    <div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div>
+                    <div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div>
+                    <div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div>
+                    <div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div>
+                    <div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div>
+                    <div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div>
+                    <div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div>
+                    <div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div>
+                    <div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div>
+                    <div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div><div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div><div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div><div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div><div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div><div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div><div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div><div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div><div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div><div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div><div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div><div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div><div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div><div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div><div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div><div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div><div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                    </a>
+                    <div class="desc">Warren</div>
+                </div>
+
+
+                </div>
+            </section>
+        </div>
+
+
+
+
+
+                    <!--<div id="team" >-->
+                        <!--<figure><img src="assets/common-images/020.png"><figcaption><a href="#">Warren</a><p><a href="#"> Notes</a></p></figcaption></figure>-->
+                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/evgeny.jpg"><figcaption>Evgeny Tchebotarev</figcaption></figure>-->
+                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/dustin.jpg"><figcaption>Dustin Plett</figcaption></figure>-->
+                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/adam.jpg"><figcaption>Adam Shutsa</figcaption></figure>-->
+                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/diana.jpg"><figcaption>Diana Tula</figcaption></figure>-->
+                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/andrey.jpg"><figcaption>Andrey Tochilin</figcaption></figure>-->
+                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/paddy.jpg"><figcaption>Paddy O’Brien</figcaption></figure>-->
+                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/roxy.jpg"><figcaption>Roxy Keshavarznia</figcaption></figure>-->
+                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/eric.jpg"><figcaption>Eric Akaoka</figcaption></figure>-->
+                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/marc.jpg"><figcaption>Marc Bodmer</figcaption></figure>-->
+                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/david.jpg"><figcaption>David Charlec</figcaption></figure>-->
+                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/hugo.jpg"><figcaption>Hugo Croft-Levesque</figcaption></figure>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</section>-->
+        <!--</div>-->
+
+
+
+<!--side-->
+        <script>
+            function lab(evt, tag) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(tag).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script>
 
     <!-- js -->
         <script>
@@ -1208,9 +1130,15 @@
             });
         </script>
 
-        <!--<script src="assets/common-js/en.min.js"></script>-->
-        <!--<script src="assets/common-js/jquery.bs_pagination.min.js"></script>-->
+        <!--wiki-->
+        <script>
+            $(window).on("load resize ", function() {
+                var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+                $('.tbl-header').css({'padding-right':scrollWidth});
+            }).resize();
+        </script>
         <script src="assets/common-js/paging.js"></script>
+    <script src="assets/common-js/filter.js"></script>
         <script src="assets/common-js/move-top.js"></script>
         <script src="assets/common-js/easing.js "></script>
         <script src="assets/common-js/SmoothScroll.min.js "></script>

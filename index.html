@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="keywords" content="publiclab2" />
     <script>
-        addEventListener("load", function () {
+        addEventListener("load", function() {
             setTimeout(hideURLbar, 0);
         }, false);
 
@@ -20,14 +20,17 @@
     <link href="assets/common-css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
     <link href="assets/common-css/style.css" type="text/css" rel="stylesheet" media="all">
     <link href="assets/common-css/filter.css" type="text/css" rel="stylesheet" media="all">
-    <link href="assets/common-css/all.css" rel="stylesheet">
-    <link href="assets/common-css/fontawesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+
 
     <!-- online-fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!--scripts-->
+    <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 </head>
@@ -36,11 +39,9 @@
 
     <!--sidenav-->
     <div class="sidenav">
-        <!-- header -->
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-gradient-secondary pt-3 flex-column">
-                <button class="navbar-toggler ml-lg-auto mt-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler ml-lg-auto mt-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -55,52 +56,15 @@
                         <button class="button button2" onclick="lab(event, 'Wiki')"><a href="#Wiki">Wiki</a></button>
                         <button class="button button2" onclick="lab(event, 'Maps')"><a href="#maps">Maps</a></button>
                         <button class="button button2" onclick="lab(event, 'Teams')"><a href="#teams">Contributors</a></button>
+                        <button class="button button2" onclick="lab(event, 'Tags')"><a href="#tags">Related Tasks</a></button>
+
                     </div>
 
-                    <!--<div id="Notes" class="tabcontent">-->
-                        <!--<h3>London</h3>-->
-                        <!--<p>London is the capital city of England.</p>-->
-                    <!--</div>-->
 
-                    <!--<div id="Questions" class="tabcontent">-->
-                        <!--<h3>Paris</h3>-->
-                        <!--<p>Paris is the capital of France.</p>-->
-                    <!--</div>-->
-
-                    <!---->
-                        <!--<h3>Tokyo</h3>-->
-                        <!--<p>Tokyo is the capital of Japan.</p>-->
-                    <!--</div>-->
-                    <!--<ul class="navbar-nav text-center flex-column">-->
-                        <!--<li class="nav-item active">-->
-                            <!--<a class="nav-link" href="#research_notes">Research Notes-->
-                                <!--<span class="sr-only">(current)</span>-->
-                            <!--</a>-->
-                        <!--</li>-->
-                        <!--<li class="nav-item">-->
-                            <!--<a class="nav-link scroll" href="#questions">Questions</a>-->
-                        <!--</li>-->
-                        <!--<li class="nav-item">-->
-                            <!--<a class="nav-link scroll" href="#">Wiki pages</a>-->
-                        <!--</li>-->
-                        <!--<li class="nav-item">-->
-                            <!--<a class="nav-link scroll" href="#">Maps</a>-->
-                        <!--</li>-->
-                        <!--<li class="nav-item">-->
-                            <!--<a class="nav-link scroll" href="#">Contributors</a>-->
-                        <!--</li>-->
-                        <!--<li class="nav-item">-->
-                            <!--<a class="nav-link scroll" href="#">Follow topic</a>-->
-                        <!--</li>-->
-                        <!--<li class="nav-item">-->
-                            <!--<a class="nav-link scroll" href="#">Related Tags</a>-->
-                        <!--</li>-->
-                    <!--</ul>-->
                 </div>
 
             </nav>
         </header>
-        <!-- //header -->
     </div>
 
     <!--Main content-->
@@ -126,7 +90,7 @@
 
             </div>
 
-            <!--questions-->
+            <!-- ask/ans questions-->
             <div class="btn-group" style="width:100%">
                 <button style="width:50%"><a href="https://publiclab.org/post?tags=question:balloon-mapping&template=question&redirect=question"> Ask a Question<i class="fas fa-question"></i></a></button>
                 <p style="padding-top: 2em; font-size: 1.3rem">or</p>
@@ -134,50 +98,48 @@
             </div>
         </div>
 
-
-
-
-
         <!--research notes-->
         <div id="Notes" class="tabcontent">
             <section class="wthree-row py-lg-5" id="research_notes">
-            <div class="container pt-sm-5">
-                <h3 class="stat-title pb-3">Research notes</h3>
+                <div class="container pt-sm-5">
+                    <h3 class="stat-title pb-3">Research notes</h3>
 
-                <span class="w3-line mx-auto text-center d-block"></span>
+                    <span class="w3-line mx-auto text-center d-block"></span>
 
-                <div class="container">
+                    <div class="container">
 
-                    <div class="dropdown">
-                        <span class="selLabel">Filter Notes</span>
-                        <input type="hidden" name="cd-dropdown">
-                        <ul class="dropdown-list">
-                            <li data-value="1">
-                                <span>Most viewed</span>
-                            </li>
-                            <li data-value="2">
-                                <span>Most important</span>
-                            </li>
-                            <li data-value="3">
-                                <span>Recent updates</span>
-                            </li>
-                            <li data-value="4">
-                                <span>New this week</span>
-                            </li>
-                        </ul>
+                        <div class="dropdown">
+                            <span class="selLabel">Filter Notes</span>
+                            <input type="hidden" name="cd-dropdown">
+                            <ul class="dropdown-list">
+                                <li data-value="1">
+                                    <span>Most viewed</span>
+                                </li>
+                                <li data-value="2">
+                                    <span>Most important</span>
+                                </li>
+                                <li data-value="3">
+                                    <span>Recent updates</span>
+                                </li>
+                                <li data-value="4">
+                                    <span>New this week</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
 
-                <div class="container">
-                    <!--page1-->
-                    <div id="pg1">
+                    <div class="container">
+                        <!--page1-->
+                        <div id="pg1">
                             <div class="row pt-5 mt-4 d-flex justify-content-center">
                                 <!--cards-->
                                 <div class="card-columns">
                                     <div class="card">
                                         <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
                                         <div class="card-body">
-                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                            <a href="#">
+                                                <p class="card-text">Educating a New Generation of Advocates</p>
+                                            </a>
                                         </div>
                                         <div class="card-footer">
                                             <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
@@ -186,7 +148,9 @@
                                     <div class="card">
                                         <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
                                         <div class="card-body">
-                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                            <a href="#">
+                                                <p class="card-text">Educating a New Generation of Advocates</p>
+                                            </a>
                                         </div>
                                         <div class="card-footer">
                                             <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
@@ -195,7 +159,9 @@
                                     <div class="card">
                                         <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
                                         <div class="card-body">
-                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                            <a href="#">
+                                                <p class="card-text">Educating a New Generation of Advocates</p>
+                                            </a>
                                         </div>
                                         <div class="card-footer">
                                             <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
@@ -204,7 +170,9 @@
                                     <div class="card">
                                         <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
                                         <div class="card-body">
-                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                            <a href="#">
+                                                <p class="card-text">Educating a New Generation of Advocates</p>
+                                            </a>
                                         </div>
                                         <div class="card-footer">
                                             <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
@@ -213,7 +181,9 @@
                                     <div class="card">
                                         <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
                                         <div class="card-body">
-                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                            <a href="#">
+                                                <p class="card-text">Educating a New Generation of Advocates</p>
+                                            </a>
                                         </div>
                                         <div class="card-footer">
                                             <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
@@ -222,7 +192,9 @@
                                     <div class="card">
                                         <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
                                         <div class="card-body">
-                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                            <a href="#">
+                                                <p class="card-text">Educating a New Generation of Advocates</p>
+                                            </a>
                                         </div>
                                         <div class="card-footer">
                                             <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
@@ -231,7 +203,9 @@
                                     <div class="card">
                                         <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
                                         <div class="card-body">
-                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                            <a href="#">
+                                                <p class="card-text">Educating a New Generation of Advocates</p>
+                                            </a>
                                         </div>
                                         <div class="card-footer">
                                             <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
@@ -240,7 +214,9 @@
                                     <div class="card">
                                         <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
                                         <div class="card-body">
-                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                            <a href="#">
+                                                <p class="card-text">Educating a New Generation of Advocates</p>
+                                            </a>
                                         </div>
                                         <div class="card-footer">
                                             <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
@@ -249,7 +225,9 @@
                                     <div class="card">
                                         <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
                                         <div class="card-body">
-                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                            <a href="#">
+                                                <p class="card-text">Educating a New Generation of Advocates</p>
+                                            </a>
                                         </div>
                                         <div class="card-footer">
                                             <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
@@ -258,7 +236,9 @@
                                     <div class="card">
                                         <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
                                         <div class="card-body">
-                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                            <a href="#">
+                                                <p class="card-text">Educating a New Generation of Advocates</p>
+                                            </a>
                                         </div>
                                         <div class="card-footer">
                                             <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
@@ -267,7 +247,9 @@
                                     <div class="card">
                                         <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
                                         <div class="card-body">
-                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                            <a href="#">
+                                                <p class="card-text">Educating a New Generation of Advocates</p>
+                                            </a>
                                         </div>
                                         <div class="card-footer">
                                             <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
@@ -276,7 +258,9 @@
                                     <div class="card">
                                         <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
                                         <div class="card-body">
-                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                            <a href="#">
+                                                <p class="card-text">Educating a New Generation of Advocates</p>
+                                            </a>
                                         </div>
                                         <div class="card-footer">
                                             <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
@@ -285,7 +269,9 @@
                                     <div class="card">
                                         <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
                                         <div class="card-body">
-                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                            <a href="#">
+                                                <p class="card-text">Educating a New Generation of Advocates</p>
+                                            </a>
                                         </div>
                                         <div class="card-footer">
                                             <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
@@ -294,7 +280,9 @@
                                     <div class="card">
                                         <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
                                         <div class="card-body">
-                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                            <a href="#">
+                                                <p class="card-text">Educating a New Generation of Advocates</p>
+                                            </a>
                                         </div>
                                         <div class="card-footer">
                                             <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
@@ -303,7 +291,9 @@
                                     <div class="card">
                                         <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
                                         <div class="card-body">
-                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                            <a href="#">
+                                                <p class="card-text">Educating a New Generation of Advocates</p>
+                                            </a>
                                         </div>
                                         <div class="card-footer">
                                             <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
@@ -312,7 +302,9 @@
                                     <div class="card">
                                         <a href="#"><img class="card-img-top" src="assets/common-images/001.jpg" alt="Educating a New Generation of Advocates"></a>
                                         <div class="card-body">
-                                            <a href="#"><p class="card-text">Educating a New Generation of Advocates</p></a>
+                                            <a href="#">
+                                                <p class="card-text">Educating a New Generation of Advocates</p>
+                                            </a>
                                         </div>
                                         <div class="card-footer">
                                             <small class="text-muted">by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
@@ -321,372 +313,424 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </div>
-
-                <!--<div class="pagination">-->
-                    <!--<a href="#research_notes" class="disabled">&laquo;</a>-->
-                    <!--<a href="#research_notes" id="no1">1</a>-->
-                    <!--<a href="#research_notes" id="no2">2</a>-->
-                    <!--<a href="#research_notes" id="no3">3</a>-->
-                    <!--<a href="#research_notes" id="no4">4</a>-->
-                    <!--<a href="#research_notes" id="no5">5</a>-->
-                    <!--<a href="#research_notes" id="no6">6</a>-->
-                    <!--<a href="#research_notes" id="no7">7</a>-->
-                    <!--<a href="#research_notes" class="disabled">&raquo;</a>-->
-                <!--</div>-->
-
-            </div>
-        </section>
+            </section>
         </div>
-            <!--questions-->
+
+        <!--questions-->
         <div id="Questions" class="tabcontent">
             <section class="wthree-row py-lg-5" id="questions">
-            <div class="container pt-sm-5">
-                <h3 class="stat-title pb-3">Questions</h3>
+                <div class="container pt-sm-5">
+                    <h3 class="stat-title pb-3">Questions</h3>
 
-                <span class="w3-line mx-auto text-center d-block"></span>
+                    <span class="w3-line mx-auto text-center d-block"></span>
 
 
-                <div class="container">
-                    <ul class="nav nav-tabs">
-                        <li class="active"><a data-toggle="tab" href="#ask">Asked</a></li>
-                        <li><a data-toggle="tab" href="#ans">Answered</a></li>
+                    <div class="container">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#ask">Asked</a></li>
+                            <li><a data-toggle="tab" href="#ans">Answered</a></li>
 
-                    </ul>
+                        </ul>
 
-                    <div class="tab-content">
-                        <!--asked-->
-                        <div id="ask" class="tab-pane fade in active">
-                            <div class="row pt-5 mt-4 d-flex justify-content-center">
-                                <!--cards-->
-                                <div class="card-columns">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
-                                            <button class=" button1"><a href="#">post an answer</a></button>
+                        <div class="tab-content">
+                            <!--asked-->
+                            <div id="ask" class="tab-pane fade in active">
+                                <div class="row pt-5 mt-4 d-flex justify-content-center">
+                                    <!--cards-->
+                                    <div class="card-columns">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">How to set automatic shoot in Mini Camera</p>
+                                                </a>
+                                                <button class=" button1"><a href="#">post an answer</a></button>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                            </div>
                                         </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">How to set automatic shoot in Mini Camera</p>
+                                                </a>
+                                                <button class=" button1"><a href="#">post an answer</a></button>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
-                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">How to set automatic shoot in Mini Camera</p>
+                                                </a>
+                                                <button class=" button1"><a href="#">post an answer</a></button>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                            </div>
                                         </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">How to set automatic shoot in Mini Camera</p>
+                                                </a>
+                                                <button class=" button1"><a href="#">post an answer</a></button>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
-                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">How to set automatic shoot in Mini Camera</p>
+                                                </a>
+                                                <button class=" button1"><a href="#">post an answer</a></button>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                            </div>
                                         </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">How to set automatic shoot in Mini Camera</p>
+                                                </a>
+                                                <button class=" button1"><a href="#">post an answer</a></button>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
-                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">How to set automatic shoot in Mini Camera</p>
+                                                </a>
+                                                <button class=" button1"><a href="#">post an answer</a></button>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                            </div>
                                         </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">How to set automatic shoot in Mini Camera</p>
+                                                </a>
+                                                <button class=" button1"><a href="#">post an answer</a></button>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
-                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">How to set automatic shoot in Mini Camera</p>
+                                                </a>
+                                                <button class=" button1"><a href="#">post an answer</a></button>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                            </div>
                                         </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">How to set automatic shoot in Mini Camera</p>
+                                                </a>
+                                                <button class=" button1"><a href="#">post an answer</a></button>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
-                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">How to set automatic shoot in Mini Camera</p>
+                                                </a>
+                                                <button class=" button1"><a href="#">post an answer</a></button>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                            </div>
                                         </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">How to set automatic shoot in Mini Camera</p>
+                                                </a>
+                                                <button class=" button1"><a href="#">post an answer</a></button>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
-                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">How to set automatic shoot in Mini Camera</p>
+                                                </a>
+                                                <button class=" button1"><a href="#">post an answer</a></button>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                            </div>
                                         </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">How to set automatic shoot in Mini Camera</p>
+                                                </a>
+                                                <button class=" button1"><a href="#">post an answer</a></button>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
-                                            <button class=" button1"><a href="#">post an answer</a></button>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">How to set automatic shoot in Mini Camera</p>
+                                                </a>
+                                                <button class=" button1"><a href="#">post an answer</a></button>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                            </div>
                                         </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">How to set automatic shoot in Mini Camera</p>
+                                                </a>
+                                                <button class=" button1"><a href="#">post an answer</a></button>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
-                                            <button class=" button1"><a href="#">post an answer</a></button>
-                                        </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
-                                            <button class=" button1"><a href="#">post an answer</a></button>
-                                        </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
-                                            <button class=" button1"><a href="#">post an answer</a></button>
-                                        </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
-                                            <button class=" button1"><a href="#">post an answer</a></button>
-                                        </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
-                                            <button class=" button1"><a href="#">post an answer</a></button>
-                                        </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
-                                            <button class=" button1"><a href="#">post an answer</a></button>
-                                        </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
-                                            <button class=" button1"><a href="#">post an answer</a></button>
-                                        </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">How to set automatic shoot in Mini Camera</p></a>
-                                            <button class=" button1"><a href="#">post an answer</a></button>
-                                        </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted">asked by <a href="#">joyofsoy</a> 2 days ago | <i class="far fa-comment"></i> 0 | <i class="fas fa-link"></i> |<i class="fas fa-eye"></i> 72 views | <i class="far fa-star"></i> 1</small>
-                                        </div>
-                                    </div>
 
+                                    </div>
+                                </div>
+                            </div>
+                            <!--answered-->
+                            <div id="ans" class="tab-pane fade">
+                                <div class="row pt-5 mt-4 d-flex justify-content-center">
+                                    <!--cards-->
+                                    <div class="card-columns">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p>
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                                <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p>
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                                <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p>
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                                <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p>
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                                <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p>
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                                <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p>
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                                <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p>
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                                <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p>
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                                <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p>
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                                <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p>
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                                <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p>
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                                <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p>
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                                <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p>
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                                <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p>
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                                <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p>
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                                <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p>
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
+                                                <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!--answered-->
-                        <div id="ans" class="tab-pane fade">
-                            <div class="row pt-5 mt-4 d-flex justify-content-center">
-                                <!--cards-->
-                                <div class="card-columns">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
 
-                                        </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
-                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
-
-                                        </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
-                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
-
-                                        </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
-                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
-
-                                        </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
-                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
-
-                                        </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
-                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
-
-                                        </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
-                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
-
-                                        </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
-                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
-
-                                        </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
-                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
-
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
-                                        <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
-                                    </div>
-                                </div>
-                                    <div class="card">
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
-
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
-                                        <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
-                                    </div>
-                                </div>
-                                    <div class="card">
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
-
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
-                                        <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
-                                    </div>
-                                </div>
-                                    <div class="card">
-                                    <div class="card-body">
-                                        <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
-
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
-                                        <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
-                                    </div>
-                                </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
-
-                                        </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
-                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
-
-                                        </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
-                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
-
-                                        </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
-                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#"><p class="card-text">Should I invest in balloons or a drone for windless aerial photography/mapping?</p></a>
-
-                                        </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted"><a href="#">Kmckeown</a> asked 2 days ago </small>
-                                            <button class="button1"><a>Answers<i class="fas fa-caret-down"></i></a></button>
-                                        </div>
-                                    </div>
-
-
-
-
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
+
                 </div>
-
-
-            </div>
-        </section>
+            </section>
         </div>
 
         <!--wiki-->
@@ -697,162 +741,157 @@
 
                     <span class="w3-line mx-auto text-center d-block"></span>
 
-                <div class="tbl-header">
-                    <table cellpadding="0" cellspacing="0" border="0">
-                        <thead>
-                        <tr>
-                            <th>Title</th>
-                            <th>URL</th>
-                            <th>Last edited</th>
-                            <th>Edits</th>
-                            <th>Page views</th>
-                            <th>Likes</th>
-                        </tr>
-                        </thead>
-                    </table>
-                </div>
-                <div class="tbl-content">
-                    <table cellpadding="0" cellspacing="0" border="0">
-                        <tbody>
-                            <tr>
-                                <td><a href="#">Pi Camera</a></td>
-                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
-                                <td>10 days ago by <a href="#">warren</a></td>
-                                <td>14</td>
-                                <td style="text-align: center;">1191</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Pi Camera</a></td>
-                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
-                                <td>10 days ago by <a href="#">warren</a></td>
-                                <td>14</td>
-                                <td style="text-align: center;">1191</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Pi Camera</a></td>
-                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
-                                <td>10 days ago by <a href="#">warren</a></td>
-                                <td>14</td>
-                                <td style="text-align: center;">1191</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Pi Camera</a></td>
-                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
-                                <td>10 days ago by <a href="#">warren</a></td>
-                                <td>14</td>
-                                <td style="text-align: center;">1191</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Pi Camera</a></td>
-                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
-                                <td>10 days ago by <a href="#">warren</a></td>
-                                <td>14</td>
-                                <td style="text-align: center;">1191</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Pi Camera</a></td>
-                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
-                                <td>10 days ago by <a href="#">warren</a></td>
-                                <td>14</td>
-                                <td style="text-align: center;">1191</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Pi Camera</a></td>
-                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
-                                <td>10 days ago by <a href="#">warren</a></td>
-                                <td>14</td>
-                                <td style="text-align: center;">1191</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Pi Camera</a></td>
-                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
-                                <td>10 days ago by <a href="#">warren</a></td>
-                                <td>14</td>
-                                <td style="text-align: center;">1191</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Pi Camera</a></td>
-                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
-                                <td>10 days ago by <a href="#">warren</a></td>
-                                <td>14</td>
-                                <td style="text-align: center;">1191</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Pi Camera</a></td>
-                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
-                                <td>10 days ago by <a href="#">warren</a></td>
-                                <td>14</td>
-                                <td style="text-align: center;">1191</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Pi Camera</a></td>
-                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
-                                <td>10 days ago by <a href="#">warren</a></td>
-                                <td>14</td>
-                                <td style="text-align: center;">1191</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Pi Camera</a></td>
-                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
-                                <td>10 days ago by <a href="#">warren</a></td>
-                                <td>14</td>
-                                <td style="text-align: center;">1191</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Pi Camera</a></td>
-                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
-                                <td>10 days ago by <a href="#">warren</a></td>
-                                <td>14</td>
-                                <td style="text-align: center;">1191</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Pi Camera</a></td>
-                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
-                                <td>10 days ago by <a href="#">warren</a></td>
-                                <td>14</td>
-                                <td style="text-align: center;">1191</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Pi Camera</a></td>
-                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
-                                <td>10 days ago by <a href="#">warren</a></td>
-                                <td>14</td>
-                                <td style="text-align: center;">1191</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Pi Camera</a></td>
-                                <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
-                                <td>10 days ago by <a href="#">warren</a></td>
-                                <td>14</td>
-                                <td style="text-align: center;">1191</td>
-                                <td>3</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                    <div class="tbl-header">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>URL</th>
+                                    <th>Last edited</th>
+                                    <th>Edits</th>
+                                    <th>Page views</th>
+                                    <th>Likes</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="tbl-content">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tbody>
+                                <tr>
+                                    <td><a href="#">Pi Camera</a></td>
+                                    <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                    <td>10 days ago by <a href="#">warren</a></td>
+                                    <td>14</td>
+                                    <td style="text-align: center;">1191</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Pi Camera</a></td>
+                                    <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                    <td>10 days ago by <a href="#">warren</a></td>
+                                    <td>14</td>
+                                    <td style="text-align: center;">1191</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Pi Camera</a></td>
+                                    <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                    <td>10 days ago by <a href="#">warren</a></td>
+                                    <td>14</td>
+                                    <td style="text-align: center;">1191</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Pi Camera</a></td>
+                                    <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                    <td>10 days ago by <a href="#">warren</a></td>
+                                    <td>14</td>
+                                    <td style="text-align: center;">1191</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Pi Camera</a></td>
+                                    <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                    <td>10 days ago by <a href="#">warren</a></td>
+                                    <td>14</td>
+                                    <td style="text-align: center;">1191</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Pi Camera</a></td>
+                                    <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                    <td>10 days ago by <a href="#">warren</a></td>
+                                    <td>14</td>
+                                    <td style="text-align: center;">1191</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Pi Camera</a></td>
+                                    <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                    <td>10 days ago by <a href="#">warren</a></td>
+                                    <td>14</td>
+                                    <td style="text-align: center;">1191</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Pi Camera</a></td>
+                                    <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                    <td>10 days ago by <a href="#">warren</a></td>
+                                    <td>14</td>
+                                    <td style="text-align: center;">1191</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Pi Camera</a></td>
+                                    <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                    <td>10 days ago by <a href="#">warren</a></td>
+                                    <td>14</td>
+                                    <td style="text-align: center;">1191</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Pi Camera</a></td>
+                                    <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                    <td>10 days ago by <a href="#">warren</a></td>
+                                    <td>14</td>
+                                    <td style="text-align: center;">1191</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Pi Camera</a></td>
+                                    <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                    <td>10 days ago by <a href="#">warren</a></td>
+                                    <td>14</td>
+                                    <td style="text-align: center;">1191</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Pi Camera</a></td>
+                                    <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                    <td>10 days ago by <a href="#">warren</a></td>
+                                    <td>14</td>
+                                    <td style="text-align: center;">1191</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Pi Camera</a></td>
+                                    <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                    <td>10 days ago by <a href="#">warren</a></td>
+                                    <td>14</td>
+                                    <td style="text-align: center;">1191</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Pi Camera</a></td>
+                                    <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                    <td>10 days ago by <a href="#">warren</a></td>
+                                    <td>14</td>
+                                    <td style="text-align: center;">1191</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Pi Camera</a></td>
+                                    <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                    <td>10 days ago by <a href="#">warren</a></td>
+                                    <td>14</td>
+                                    <td style="text-align: center;">1191</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Pi Camera</a></td>
+                                    <td style="font-style: italic"><a href="#">/wiki/pi-camera</a></td>
+                                    <td>10 days ago by <a href="#">warren</a></td>
+                                    <td>14</td>
+                                    <td style="text-align: center;">1191</td>
+                                    <td>3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </section>
         </div>
-
-
-
-
-
 
         <!--maps-->
         <div id="Maps" class="tabcontent">
@@ -860,9 +899,11 @@
                 <div class="container pt-sm-5">
                     <h3 class="stat-title pb-3">Maps</h3>
                     <div class="card" style="width: 50%;">
-                        <a href="#"><img class="card-img-top" src="assets/common-images/Screen_Shot_2014-03-28_at_3.05.31_PM.png" alt=""  height="inherit"></a>
+                        <a href="#"><img class="card-img-top" src="assets/common-images/Screen_Shot_2014-03-28_at_3.05.31_PM.png" alt="" height="inherit"></a>
                         <div class="card-body">
-                            <a href="#"><p class="card-text">CBD Growth. Lafayette, California.</p></a>
+                            <a href="#">
+                                <p class="card-text">CBD Growth. Lafayette, California.</p>
+                            </a>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">by <a href="#"> Cartographer: Stewart Long | Mapper: Stewart Long</a> over 8 years ago | <i class="far fa-comment"></i> 0 | <i class="far fa-star"></i> 0</small>
@@ -877,180 +918,297 @@
             <section class="wthree-row py-lg-5" id="teams">
                 <div class="container pt-sm-5">
                     <h3 class="stat-title pb-3">Contributors</h3>
-                    <h5 class="stat-title pb-3">Howdy here, see how big the community around this topic is <i class="fas fa-smile-beam"></i> </h5>
-
                     <span class="w3-line mx-auto text-center d-block"></span>
+                    <h5 class="stat-title pb-3 text-center">Howdy here, see how big the community around this topic is <i class="far fa-grin-hearts"></i> </h5>
 
                     <div class="gallery">
                         <a target="_blank" href="">
-                            <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                            <img src="assets/common-images/gallery2.jpg" alt="" width="600" height="400">
                         </a>
-                        <div class="desc">Warren</div>
+                        <div class="desc"><a href="#link to profile">John Doe</a></div>
                     </div>
                     <div class="gallery">
                         <a target="_blank" href="">
                             <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
                         </a>
-                        <div class="desc">Warren</div>
+                        <div class="desc"><a href="#link to the profile">Jane Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery3.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">Richard Roe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery2.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">John Doe</a></div>
                     </div>
                     <div class="gallery">
                         <a target="_blank" href="">
                             <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
                         </a>
-                        <div class="desc">Warren</div>
+                        <div class="desc"><a href="#link to the profile">Jane Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery3.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">Richard Roe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery2.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">John Doe</a></div>
                     </div>
                     <div class="gallery">
                         <a target="_blank" href="">
                             <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
                         </a>
-                        <div class="desc">Warren</div>
+                        <div class="desc"><a href="#link to the profile">Jane Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery3.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">Richard Roe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery2.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">John Doe</a></div>
                     </div>
                     <div class="gallery">
                         <a target="_blank" href="">
                             <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
                         </a>
-                        <div class="desc">Warren</div>
+                        <div class="desc"><a href="#link to the profile">Jane Doe</a></div>
                     </div>
                     <div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div>
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery3.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">Richard Roe</a></div>
+                    </div>
                     <div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div>
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery2.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">John Doe</a></div>
+                    </div>
                     <div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div>
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to the profile">Jane Doe</a></div>
+                    </div>
                     <div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div>
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery3.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">Richard Roe</a></div>
+                    </div>
                     <div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div>
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery2.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">John Doe</a></div>
+                    </div>
                     <div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div>
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to the profile">Jane Doe</a></div>
+                    </div>
                     <div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div>
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery3.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">Richard Roe</a></div>
+                    </div>
                     <div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div>
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery2.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">John Doe</a></div>
+                    </div>
                     <div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div>
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to the profile">Jane Doe</a></div>
+                    </div>
                     <div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div><div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div><div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div><div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div><div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div><div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div><div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div><div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div><div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div><div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div><div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div><div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div><div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div><div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div><div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div><div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div><div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
-                    </a>
-                    <div class="desc">Warren</div>
-                </div>
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery3.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">Richard Roe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery2.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">John Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to the profile">Jane Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery3.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">Richard Roe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery2.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">John Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to the profile">Jane Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery3.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">Richard Roe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery2.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">John Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to the profile">Jane Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery3.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">Richard Roe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery2.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">John Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to the profile">Jane Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery3.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">Richard Roe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery2.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">John Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to the profile">Jane Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery3.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">Richard Roe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery2.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">John Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to the profile">Jane Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery3.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">Richard Roe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery2.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">John Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to the profile">Jane Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery3.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">Richard Roe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery2.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">John Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to the profile">Jane Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery3.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">Richard Roe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery2.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">John Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to the profile">Jane Doe</a></div>
+                    </div>
+                    <div class="gallery">
+                        <a target="_blank" href="">
+                            <img src="assets/common-images/gallery3.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc"><a href="#link to profile">Richard Roe</a></div>
+                    </div>
 
 
                 </div>
@@ -1059,29 +1217,9 @@
 
 
 
+        <!--General scripts-->
 
-
-                    <!--<div id="team" >-->
-                        <!--<figure><img src="assets/common-images/020.png"><figcaption><a href="#">Warren</a><p><a href="#"> Notes</a></p></figcaption></figure>-->
-                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/evgeny.jpg"><figcaption>Evgeny Tchebotarev</figcaption></figure>-->
-                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/dustin.jpg"><figcaption>Dustin Plett</figcaption></figure>-->
-                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/adam.jpg"><figcaption>Adam Shutsa</figcaption></figure>-->
-                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/diana.jpg"><figcaption>Diana Tula</figcaption></figure>-->
-                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/andrey.jpg"><figcaption>Andrey Tochilin</figcaption></figure>-->
-                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/paddy.jpg"><figcaption>Paddy O’Brien</figcaption></figure>-->
-                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/roxy.jpg"><figcaption>Roxy Keshavarznia</figcaption></figure>-->
-                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/eric.jpg"><figcaption>Eric Akaoka</figcaption></figure>-->
-                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/marc.jpg"><figcaption>Marc Bodmer</figcaption></figure>-->
-                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/david.jpg"><figcaption>David Charlec</figcaption></figure>-->
-                        <!--<figure><img src="http://500px.com/graphics/pages/team/squares/hugo.jpg"><figcaption>Hugo Croft-Levesque</figcaption></figure>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</section>-->
-        <!--</div>-->
-
-
-
-<!--side-->
+        <!--side-->
         <script>
             function lab(evt, tag) {
                 var i, tabcontent, tablinks;
@@ -1101,10 +1239,10 @@
             document.getElementById("defaultOpen").click();
         </script>
 
-    <!-- js -->
+        <!-- animation -->
         <script>
-            jQuery(document).ready(function ($) {
-                $(".scroll ").click(function (event) {
+            jQuery(document).ready(function($) {
+                $(".scroll ").click(function(event) {
                     event.preventDefault();
 
                     $('html,body').animate({
@@ -1113,14 +1251,15 @@
                 });
             });
         </script>
+
         <script>
-            $(document).ready(function () {
+            $(document).ready(function() {
                 $().UItoTop({
                     easingType: 'easeOutQuart'
                 });
             })
-            jQuery(document).ready(function ($) {
-                $(".scroll ").click(function (event) {
+            jQuery(document).ready(function($) {
+                $(".scroll ").click(function(event) {
                     event.preventDefault();
 
                     $('html,body').animate({
@@ -1130,15 +1269,18 @@
             });
         </script>
 
-        <!--wiki-->
+        <!--wiki table-->
         <script>
             $(window).on("load resize ", function() {
                 var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
-                $('.tbl-header').css({'padding-right':scrollWidth});
+                $('.tbl-header').css({
+                    'padding-right': scrollWidth
+                });
             }).resize();
         </script>
+
         <script src="assets/common-js/paging.js"></script>
-    <script src="assets/common-js/filter.js"></script>
+        <script src="assets/common-js/filter.js"></script>
         <script src="assets/common-js/move-top.js"></script>
         <script src="assets/common-js/easing.js "></script>
         <script src="assets/common-js/SmoothScroll.min.js "></script>
@@ -1146,4 +1288,5 @@
 
     </div>
 </body>
+
 </html>
